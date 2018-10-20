@@ -11,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Breed implements Serializable {
 
@@ -21,6 +23,8 @@ public class Breed implements Serializable {
 	private long breedId;
 	@Column
 	private String descbreed;
+	
+	@JsonIgnore
 	@OneToMany(mappedBy = "breed", fetch = FetchType.EAGER)
 	private List<Dog> dogList;
 
