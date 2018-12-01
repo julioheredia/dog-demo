@@ -22,6 +22,7 @@ public class Dog implements Serializable {
 	@Column
 	private String name;
 
+//	@JsonIgnore
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "breed_id", nullable = false)
 	private Breed breed;

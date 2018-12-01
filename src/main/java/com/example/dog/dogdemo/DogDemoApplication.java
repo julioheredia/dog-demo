@@ -33,12 +33,14 @@ public class DogDemoApplication extends SpringBootServletInitializer {
 		SpringApplication.run(DogDemoApplication.class, args);
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Bean
 	public ServletRegistrationBean servletRegistrationBean() {
 		FacesServlet servlet = new FacesServlet();
 		return new ServletRegistrationBean(servlet, "*.jsf");
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Bean
 	public FilterRegistrationBean rewriteFilter() {
 		FilterRegistrationBean rwFilter = new FilterRegistrationBean(new RewriteFilter());

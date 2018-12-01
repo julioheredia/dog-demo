@@ -1,7 +1,0 @@
-	CREATE TABLE
-    my_dog.BREED
-    (
-        BREED_ID BIGINT(9) AUTO_INCREMENT,
-        DESCBREED VARCHAR(200),
-        PRIMARY KEY (BREED_ID)
-    );

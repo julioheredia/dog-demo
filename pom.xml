@@ -24,6 +24,10 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<logback.version>1.1.9</logback.version>
+
+		<flyway.user>databaseUser</flyway.user>
+		<flyway.password>databasePassword</flyway.password>
+		<flyway.schemas>schemaName</flyway.schemas>
 	</properties>
 
 	<dependencies>
@@ -36,11 +40,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-
-		<!-- <dependency> -->
-		<!-- <groupId>org.springframework.boot</groupId> -->
-		<!-- <artifactId>spring-boot-starter-thymeleaf</artifactId> -->
-		<!-- </dependency> -->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -66,33 +65,14 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- HikariCP connection pool -->
-		<!-- <dependency> -->
-		<!-- <groupId>com.zaxxer</groupId> -->
-		<!-- <artifactId>HikariCP</artifactId> -->
-		<!-- <version>2.6.0</version> -->
-		<!-- </dependency> -->
-
-		<!-- <dependency> -->
-		<!-- <groupId>org.hsqldb</groupId> -->
-		<!-- <artifactId>hsqldb</artifactId> -->
-		<!-- <scope>runtime</scope> -->
-		<!-- </dependency> -->
-
-		<!-- <dependency> -->
-		<!-- <groupId>commons-lang</groupId> -->
-		<!-- <artifactId>commons-lang</artifactId> -->
-		<!-- <version>2.3</version> -->
-		<!-- </dependency> -->
-		<!-- <dependency> -->
-		<!-- <groupId>commons-collections</groupId> -->
-		<!-- <artifactId>commons-collections</artifactId> -->
-		<!-- <version>3.2.1</version> -->
-		<!-- </dependency> -->
-
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
 		</dependency>
 
 		<dependency>
@@ -129,12 +109,6 @@
 			<artifactId>primefaces</artifactId>
 			<version>6.1</version>
 		</dependency>
-
-		<!-- <dependency> -->
-		<!-- <groupId>org.projectlombok</groupId> -->
-		<!-- <artifactId>lombok</artifactId> -->
-		<!-- <version>1.16.16</version> -->
-		<!-- </dependency> -->
 
 	</dependencies>
 
